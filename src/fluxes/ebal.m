@@ -170,6 +170,7 @@ end
 while CONT                          % while energy balance does not close
     % 2.1. Net radiation of the components
     % Thermal radiative transfer model for vegetation emission (with Stefan-Boltzman's equation)
+    counter
     rad     = RTMt_sb(constants,rad,soil,leafbio,canopy,gap,Tcu,Tch,Ts(2),Ts(1),0);
     Rnhc    = rad.Rnhc + rad.Rnhct;     % Canopy (shaded) net radiation
     Rnuc    = rad.Rnuc + rad.Rnuct;     % Canopy (sunlit) net radiation
