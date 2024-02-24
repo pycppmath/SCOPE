@@ -3,7 +3,7 @@
 1,calc_planck
 1,calc_xanthophyllabs
 0,soilspectrum
-0,Fluorescence_model
+1,Fluorescence_model
 1,applTcorr
 1,verify
 1,saveCSV
