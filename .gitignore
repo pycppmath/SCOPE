@@ -12,3 +12,5 @@ SCOPE_v*/exercise*
 SCOPE_v1.73/
 data/
 output/
+input/input_data_latin_hypercube.csv
+input/setoptions.csv
