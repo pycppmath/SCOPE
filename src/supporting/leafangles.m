@@ -28,7 +28,9 @@ end
 for i=13:13                                          %  theta_l = 90:90
     F(i) =   1;                                      %  F(theta)
 end
-
+%SB
+F=(sind(2*[10:10:80,82:2:88,90])+2*[10:10:80,82:2:88,90]/180*pi)/pi;
+%SB
 lidf        =   zeros(13,1);
 for i=13:-1:2                                                           
     lidf(i) =   F(i) -   F(i-1);                     %  lidf   =   dF/dtheta;

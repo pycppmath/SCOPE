@@ -209,7 +209,13 @@ rho_dd = sigb.*iLAI;
 rdd     = R_dd(1,:)';
 rsd     = R_sd(1,:)';
 [Esun_,Esky_] = calcTOCirr(atmo,meteo,rdd,rsd,wl,nwl);
-
+% % SB begin
+load TOASolar_2005_per_nm
+Esun_=interp1(LESS_TOASolar(:,1),LESS_TOASolar(:,2),wl)*1000*cosd(30);%*cosd(30)
+% load TOASolar_THKUR
+% Esun_=interp1(TOASolar_THKUR_oIRR(:,1)*1000,TOASolar_THKUR_oIRR(:,2),wl)*cosd(30);
+Esky_=zeros(nwl,1);
+% % SB end
 [Emins_,Eplus_] = calc_fluxprofile(Esun_,0*Esky_,rs,Xss,Xsd,Xdd,R_sd,R_dd,nl,nwl);
 [Emind_,Eplud_] = calc_fluxprofile(0*Esun_,Esky_,rs,Xss,Xsd,Xdd,R_sd,R_dd,nl,nwl);
 Emin_ = Emins_+Emind_;

@@ -187,9 +187,9 @@ end
 
 %---------------------------------------------------------------------------------------------------------
 %% Define electron transport and fluorescence parameters
-kf        = 3.E7;                                    % [s-1]         rate constant for fluorescence
-kD        = 1.E8;                                   % [s-1]         rate constant for thermal deactivation at Fm
-kd        = 1.95E8;                                    % [s-1]         rate constant of energy dissipation in closed RCs (for theta=0.7 under un-stressed conditions)  
+kf        = 3.E7;                                     % [s-1]         rate constant for fluorescence
+kD        = 1.E8;                                     % [s-1]         rate constant for thermal deactivation at Fm
+kd        = 1.95E8;                                   % [s-1]         rate constant of energy dissipation in closed RCs (for theta=0.7 under un-stressed conditions)  
 po0max    = 0.88;                                     % [mol e-/E]    maximum PSII quantum yield, dark-acclimated in the absence of stress (Pfundel 1998)
 kPSII     = (kD+kf) * po0max/(1.-po0max);             % [s-1]         rate constant for photochemisty (Genty et al. 1989)
 fo0       = kf./(kf+kPSII+kD);                        % [E/E]         reference dark-adapted PSII fluorescence yield under un-stressed conditions
