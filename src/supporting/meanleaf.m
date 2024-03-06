@@ -39,6 +39,8 @@ switch choice
 %% integration over layers only         
     case 'layers'
         Fout = Ps'*F/nl;
+        Rnh_PAR_ = Ps.*F/nl;
+        save("E:\SB_personal\document\LESS_project\LESS2SCOPE_PAR\HOM23_DIS_P1A_noF\Results\Rnh_PAR_.mat","Rnh_PAR_")
         
 %% integration over both leaf angles and layers       
     case 'angles_and_layers'
@@ -49,5 +51,7 @@ switch choice
         for j = 1:nl
              Fout(:,:,j)    = Fout(:,:,j)*Ps(j);
         end
+        Rnu_PAR_ = sum(sum(Fout))/nlazi/nl;Rnu_PAR_=Rnu_PAR_(:);
         Fout                = sum(sum(sum(Fout)))/nlazi/nl;
+        save("E:\SB_personal\document\LESS_project\LESS2SCOPE_PAR\HOM23_DIS_P1A_noF\Results\Rnu_PAR_.mat","Rnu_PAR_")
 end
